@@ -29,7 +29,7 @@ steps:
   inputs:
     command: 'build'
 - task: DotNetCoreCLI@2
-  displayName: "Dotnet test"
+  displayName: "Dotnet Test"
   inputs:
     command: 'test'
 
