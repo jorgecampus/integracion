@@ -1,0 +1,16 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '2.2.108'            
+    - run: dotnet build "Ejemplo NetCore.sln"
+    - run: dotnet test "Ejemplo NetCore.sln"
